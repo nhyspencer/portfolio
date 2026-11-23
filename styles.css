@@ -10,10 +10,6 @@
    (one column, no sideways scrolling) and at 1280px (columns).
    ================================================================ */
 
-/* Disclosure: (Anthropic) Claude was used to help adapt the starter
-   files to my music site, pick the Spotify-style colors, and check my
-   work against the Assignment 4 checklist. */
-
 /* Make widths behave. Leave this line as it is. */
 * { box-sizing: border-box; }
 
@@ -62,6 +58,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: var(--space);
 }
 nav a { color: var(--text); }
@@ -73,6 +70,16 @@ nav a { color: var(--text); }
   border: 2px solid var(--brand);
   padding: var(--space);
 }
+
+/* A6 feature: the Add rec button (an id selector) uses my own colors */
+#add-rec {
+  background-color: var(--brand);
+  border-color: var(--brand);
+  color: var(--bg);
+}
+
+/* A6 feature: the message under the buttons is a softer gray */
+#rec-message { color: var(--muted); }
 
 /* The table: room inside each cell */
 table { border-collapse: collapse; }
@@ -112,3 +119,33 @@ th, td {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ---------------- Assignment 7 additions ---------------- */
+
+/* Dark mode button: the site starts dark, the button toggles the class "light" on body.
+   Same variable names, so every rule above follows. */
+body.light {
+  --brand: #0b6b2d;
+  --bg: #ffffff;
+  --light: #f2f2f2;
+  --text: #121212;
+  --muted: #4d4d4d;
+}
+body.light .btn-outline-light {
+  --bs-btn-color: var(--text);
+  --bs-btn-border-color: var(--text);
+  --bs-btn-hover-color: var(--bg);
+  --bs-btn-hover-bg: var(--text);
+  --bs-btn-hover-border-color: var(--text);
+  --bs-btn-active-color: var(--bg);
+  --bs-btn-active-bg: var(--text);
+  --bs-btn-active-border-color: var(--text);
+}
+body.light #add-rec, body.light .btn-success { color: #ffffff; background-color: var(--brand); border-color: var(--brand); }
+
+/* Contact form messages sit right under each field */
+#contact-form { display: flex; flex-direction: column; }
+.field-msg { color: var(--muted); min-height: 1.5rem; margin-bottom: 0.5rem; }
+
+/* Project cards: pictures fill the card width */
+.gallery .card img { width: 100%; height: auto; margin-bottom: var(--space); }

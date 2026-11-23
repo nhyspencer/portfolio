@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- Checklist 3: the viewport meta tag -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects | nhy</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,26 +13,40 @@
       <a href="index.html">Home</a>
       <a href="project.html">Projects</a>
       <a href="contact.html">Contact</a>
+      <button id="theme-btn" class="btn btn-sm btn-outline-light" type="button">Light mode</button>
     </nav>
   </header>
 
-  <main class="container">
-    <h1>nhy’s projects</h1>
-    <p>What I’m working toward with my music hub.</p>
+  <main class="container py-4">
+    <h1>Projects</h1>
+    <p>Three things I built this semester. Each one has a link you can open.</p>
 
-    <!-- Checklist 4: class="gallery" makes a grid. One column on a phone, three on wider screens. -->
     <section class="gallery">
-      <div class="card"><h2>Weekly song recs</h2><p>Share songs I’m currently obsessed with and give people something new to listen to each week.</p></div>
-      <div class="card"><h2>Playlists for every mood</h2><p>Create playlists for studying, driving, relaxing, and days when you just need your headphones.</p></div>
-      <div class="card"><h2>Album favorites</h2><p>Highlight my favorite albums and talk about the songs that keep me coming back to them.</p></div>
-      <div class="card"><h2>Your recommendations</h2><p>Collect song recs through my contact form and discover music outside my usual rotation.</p></div>
-      <div class="card"><h2>Random song picker</h2><p>Add a button that picks a random song from my recommendations when you don’t know what to play next.</p></div>
-      <div class="card"><h2>A music community</h2><p>Grow this site into a place where music lovers can trade favorites and put each other onto new artists.</p></div>
+      <article class="card">
+        <img src="images/shot-hub.png" alt="Screenshot of my music hub home page with the Rec board" width="600" height="400">
+        <h2>Music Hub</h2>
+        <p>My personal music site with my bio, top albums, a favorites list, and a Rec board where visitors add songs. I built it page by page all semester with HTML, CSS, Bootstrap, and JavaScript, and I wrote the Rec board with AI help and tested it.</p>
+        <a href="index.html">Open the Music Hub</a>
+      </article>
+      <article class="card">
+        <img src="images/shot-temp.png" alt="Screenshot of the temperature converter showing 25 degrees C is 77 degrees F" width="600" height="400">
+        <h2>Temperature Converter</h2>
+        <p>A small tool that turns degrees Celsius into Fahrenheit when you click Convert. I built it in class with a form, a submit event, and a function, then added a check for empty or non-number input.</p>
+        <a href="temperature.html">Try the converter</a>
+      </article>
+      <article class="card">
+        <img src="images/shot-credit.png" alt="Screenshot of the credit score checker showing the rating Good for a score of 700" width="600" height="400">
+        <h2>Credit Score Checker</h2>
+        <p>A page where you type a credit score and it tells you the rating, with lists of score ranges and score factors. I wrote the function and built both lists from arrays with forEach.</p>
+        <a href="credit.html">Try the checker</a>
+      </article>
     </section>
   </main>
 
   <footer class="container">
     <p>&copy; 2026 Nhy'Airah</p>
   </footer>
+
+  <script src="theme.js"></script>
 </body>
 </html>

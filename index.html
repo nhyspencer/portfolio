@@ -18,6 +18,7 @@
       <a href="index.html">Home</a>
       <a href="project.html">Projects</a>
       <a href="contact.html">Contact</a>
+      <button id="theme-btn" class="btn btn-sm btn-outline-light" type="button">Light mode</button>
     </nav>
   </header>
 
@@ -25,6 +26,7 @@
   <!-- Checklist 6: container py-4 keeps the page in the middle, with space above and below. -->
   <main class="container py-4">
     <h1>nhy</h1>
+    <p><strong>Nhy'Airah</strong>, Information Systems student at Texas State</p>
     <img src="images/monkey.jpg" alt="Funny monkey standing on its hind legs, my profile pic" width="120" height="120">
     <p id="intro">Music recs, playlists, and whatever i'm currently obsessed with.</p>
     <p>I'm a TXST student, and music runs my whole life. My headphones are basically glued to my ears, whether I'm walking to class, studying, or just trying to get through the day. Music is how I process everything, so I built this site to have a real place to put that and share with anyone who cares, lol.</p>
@@ -35,6 +37,12 @@
       <img src="images/sponge.jpg" alt="Spongebob floating while listening to music with headphones" width="300">
       <figcaption>Genuinely me when Clairo gets queued up.</figcaption>
     </figure>
+
+    <!-- A7 Profile: who I am and the kind of work I want -->
+    <section id="profile" class="card card-body mb-4">
+      <h2>Profile</h2>
+      <p>I'm Nhy'Airah, an Information Systems student at Texas State who builds things on the web and always has music playing while I do it. This site started as a class project and grew into my music hub and my portfolio. I'm looking for an entry-level information systems or IT role where I can keep learning and building.</p>
+    </section>
 
     <h2>Three things about me</h2>
     <!-- A4 Checklist 2: three cards. On wider screens they sit in one row. -->
@@ -74,6 +82,28 @@
       <p id="count" class="mt-3"></p>
     </section>
 
+    <!-- A6 feature: the Rec board. A visitor types a song, clicks Add rec, and it shows up in the list.
+         Every element has an id so script.js can find it. -->
+    <section class="card card-body mb-3">
+      <h2>Rec board</h2>
+      <p>Got a song I should hear? Put it on the board.</p>
+
+      <label for="rec-song">Song and artist</label>
+      <input id="rec-song" class="form-control mb-2" type="text" placeholder="Song - Artist">
+
+      <label for="rec-name">Your name (optional)</label>
+      <input id="rec-name" class="form-control mb-3" type="text" placeholder="Anonymous">
+
+      <div class="d-flex gap-2">
+        <button id="add-rec" class="btn btn-success">Add rec</button>
+        <button id="clear-recs" class="btn btn-outline-light">Clear board</button>
+      </div>
+
+      <p id="rec-message" class="mt-3"></p>
+      <ul id="rec-list"></ul>
+      <p id="rec-count"></p>
+    </section>
+
     <h2>Links I like</h2>
     <ul>
       <li><a href="https://www.spotify.com" target="_blank" rel="noopener">Spotify</a></li>
@@ -87,9 +117,13 @@
   </footer>
 
   <!-- Checklist 1: link script.js at the end of body, after the list. -->
+  <script src="theme.js"></script>
   <script src="script.js"></script>
 
-  <!-- Disclosure: (Anthropic) Claude was used to help adapt the starter files
-       to my music site and to check my work against the Assignment 4 and 5 checklists. -->
+<!-- Disclosure: (Open AI) ChatGPT was used to help adapt the starter files
+       to my music site and to check my work against the Assignment 5 checklist. -->
+  <!-- Assignment 7:
+       1. The design principle I fixed, and what I changed: Consistency. My pages did not match, because the Projects and Contact pages had no Bootstrap and the Contact page was a different looking embedded form. Now every page has the same nav, the same button, the same cards, and one styles.css, and the contact form uses the same card style as the rest of the site.
+       2. The tools and AI I used: VS Code, GitHub Desktop, GitHub, Cloudflare, Bootstrap 5, the WebAIM Contrast Checker, and Claude (Anthropic) to help build the Assignment 7 pages and check them. ChatGPT (OpenAI) helped with some earlier parts, as noted in my script.js. -->
 </body>
 </html>
