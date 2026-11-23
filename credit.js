@@ -1,4 +1,4 @@
-// Credit score checker (Week 10 in-class exercise)
+// Credit score checker (Week 10 in-class exercise 9)
 // Disclosure: (Anthropic) Claude helped me move this into my portfolio and add the empty-box check.
 // 4. A score goes in, its label comes back
 function creditLabel(score) {

@@ -1,4 +1,3 @@
-// Contact form check (A7). Pattern from the signup.js type-along.
 // Disclosure: (Anthropic) Claude helped me write this and I checked it against the Assignment 7 list.
 const form = document.getElementById("contact-form");
 const nameBox = document.getElementById("name");
